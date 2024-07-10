@@ -19,9 +19,7 @@ const checkWeather = async (city) => {
      error.style.display = flex;
      document.querySelector(".weather-body").style.display=none;
     }
-
     
-
     temperature.innerHTML = `${Math.round(weatherData.main.temp - 273.15)}°C`;
     descp.innerHTML = `${weatherData.weather[0].description}`;
     humidity.innerHTML = `${weatherData.main.humidity}%`;
