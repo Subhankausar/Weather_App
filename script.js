@@ -1,6 +1,6 @@
 const input = document.querySelector('input');
 const button = document.querySelector('button');
-const image = document.querySelectorAll('.weather-img');
+const image = document.querySelector('.weather-img');
 const temperature = document.querySelector('.temp');
 const descp = document.querySelector('.descp');
 const humidity = document.querySelector('#humidity');
@@ -13,7 +13,8 @@ const checkWeather = async (city) => {
     const api_key = "acd38b3aff926461930db6ed128f3c16";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
-    const weatherData = await fetch(`${url}`).then(response => response.json());
+   const response = await fetch(url);
+   const weatherData = await response.json();
      
     if(!response.ok){
      error.style.display = flex;
