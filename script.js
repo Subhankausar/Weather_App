@@ -10,6 +10,11 @@ const error = document.querySelector('.location-error');
 
 
 const checkWeather = async (city) => {
+    if(city==''){
+    alert("Enter a City name");
+    return;
+    }
+        
     const api_key = "acd38b3aff926461930db6ed128f3c16";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
 
