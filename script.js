@@ -19,8 +19,7 @@ const checkWeather = async (city) => {
      
     if(!response.ok){
      error.style.display = 'flex';
-     document.querySelector(".weather-body").style.display='none';
-    }
+      }
     
     temperature.innerHTML = `${Math.round(weatherData.main.temp - 273.15)}°C`;
     descp.innerHTML = `${weatherData.weather[0].description}`;
@@ -39,6 +38,7 @@ const checkWeather = async (city) => {
         case 'Snow': image.src = "./assets/snow.png";
             break;
     }
+        document.querySelector(".weather-body").style.display='flex';
 
 }
 
