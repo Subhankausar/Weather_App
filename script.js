@@ -28,15 +28,15 @@ const checkWeather = async (city) => {
     wind.innerHTML = `${weatherData.wind.speed}Km/H`;
 
     switch (weatherData.weather[0].main) {
-        case 'Clouds': image.src = "/assets/cloud.png";
+        case 'Clouds': image.src = "./assets/cloud.png";
             break;
-        case 'Clear': image.src = "/assets/clear.png";
+        case 'Clear': image.src = "./assets/clear.png";
             break;
-        case 'Rain': image.src = "/assets/rain.png";
+        case 'Rain': image.src = "./assets/rain.png";
             break;
-        case 'Mist': image.src = "/assets/mist.png";
+        case 'Mist': image.src = "./assets/mist.png";
             break;
-        case 'Snow': image.src = "/assets/snow.png";
+        case 'Snow': image.src = "./assets/snow.png";
             break;
     }
 
