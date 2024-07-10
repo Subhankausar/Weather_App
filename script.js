@@ -42,11 +42,19 @@ const checkWeather = async (city) => {
 }
 
 button.addEventListener('click', () => {
-    checkWeather(input.value);
+    if (input.value.trim() !== '') {
+        checkWeather(input.value.trim());
+    } else {
+        alert('Please enter a location');
+    };
 });
 
 input.addEventListener('keydown',(event)=>{
     if (event.code === 13 || event.key === 'Enter') {
-        checkWeather(input.value);
+         if (input.value.trim() !== '') {
+        checkWeather(input.value.trim());
+    } else {
+        alert('Please enter a location');
+    }
       }
 });
