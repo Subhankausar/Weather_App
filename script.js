@@ -17,8 +17,8 @@ const checkWeather = async (city) => {
    const weatherData = await response.json();
      
     if(!response.ok){
-     error.style.display = flex;
-     document.querySelector(".weather-body").style.display=none;
+     error.style.display = 'flex';
+     document.querySelector(".weather-body").style.display='none';
     }
     
     temperature.innerHTML = `${Math.round(weatherData.main.temp - 273.15)}°C`;
@@ -46,7 +46,7 @@ button.addEventListener('click', () => {
 });
 
 input.addEventListener('keydown',(event)=>{
-    if (event.Code === 13 || event.key === 'Enter') {
+    if (event.code === 13 || event.key === 'Enter') {
         checkWeather(input.value);
       }
 });
